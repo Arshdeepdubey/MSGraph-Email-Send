@@ -1,0 +1,47 @@
+Step 1: Sign in to the Azure Portal
+Go to the Azure portal.
+Sign in with your Azure account.
+Step 2: Create a new Azure AD Application
+In the left navigation pane, click on "Azure Active Directory."
+
+In the Azure AD blade, click on "App registrations."
+
+Click on the "+ New registration" button.
+
+Fill in the registration details:
+
+Name: Give your application a name.
+Supported account types: Choose the appropriate option based on your requirements.
+Redirect URI (optional): You can leave this blank for now.
+Click the "Register" button.
+
+Step 3: Note the Application (Client) ID
+After registration, you'll be redirected to the overview page of your application. Note the "Application (client) ID" — this is your clientId.
+
+Step 4: Generate a Client Secret
+In the left navigation pane, click on "Certificates & Secrets."
+
+Under the "Client secrets" section, click on "+ New client secret."
+
+Enter a description for the secret, choose an expiry period, and click the "Add" button.
+
+Important: Immediately copy the value of the client secret that is generated. This is your clientSecret. Once you leave the page, you won't be able to see it again.
+
+Step 5: Note the Directory (Tenant) ID
+In the left navigation pane, click on "Overview."
+
+Note the "Directory (tenant) ID" from the application overview. This is your tenantId.
+
+Step 6: Grant API Permissions (if needed)
+If your application requires specific permissions (e.g., accessing Microsoft Graph API), you may need to grant API permissions. This can be done under the "API permissions" section of your application.
+
+Step 7: Configure Redirect URI (if needed)
+If your application uses OAuth2 authorization code flow and requires a redirect URI, you can configure it under the "Authentication" section of your application.
+
+Step 8: Update Your Code
+Replace the placeholders in your Node.js code with the values obtained:
+
+Replace 'your-client-id' with the Application (Client) ID.
+Replace 'your-tenant-id' with the Directory (Tenant) ID.
+Replace 'your-client-secret' with the Client Secret.
+Now, you should be able to run your Node.js script using these credentials to authenticate with Azure AD and send emails using MSAL and Nodemailer.
