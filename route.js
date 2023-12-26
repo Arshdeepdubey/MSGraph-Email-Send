@@ -10,13 +10,13 @@ const transporter = nodemailer.createTransport({
     //     pass : "spsinbayetkkfiqs"
     // }
     auth : {
-        user : "arshdeepdubey7635@outlook.com",
-        pass : "Arshdeep@7635"
+        user : "arshdeep*********@outlook.com",
+        pass : "*************"
     }
 });
 
 const mailOptions = {
-    from : "arshdeepdubey7635@outlook.com",
+    from : "arshdeep*********@outlook.com",
     to : "1941012662.arshdeep@gmail.com",
     subject : "The Lion Sleeps Tonight!",
     html : "<h1>Email Sent Successfully</h1>"
